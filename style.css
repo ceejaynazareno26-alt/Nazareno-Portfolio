@@ -1,0 +1,393 @@
+/* =========================================
+   GLOBAL STYLES & NATURE GREEN PALETTE
+   ========================================= */
+:root {
+    --forest-green: #2d5a27;        /* Deep Forest Green */
+    --leaf-green: #4a7c59;          /* Medium Botanical Green */
+    --sage-green: #8fc0a9;          /* Soft Sage Accent */
+    --mint-bg: #f4f9f4;             /* Light Nature Cream/Mint Background */
+    --soft-leaf: #e8f3ea;           /* Card & Tag Highlight Tint */
+    --earth-dark: #243326;          /* Deep Charcoal-Green Text */
+    --earth-muted: #526655;         /* Secondary Muted Green Text */
+    --white: #ffffff;
+    --radius-organic: 16px 4px 16px 4px; /* Leaf-inspired asymmetric corners */
+    --shadow-soft: 0 6px 18px rgba(45, 90, 39, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.65;
+    color: var(--earth-dark);
+    background-color: var(--mint-bg);
+    background-image: radial-gradient(var(--soft-leaf) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* =========================================
+   HEADER & TOP NAVIGATION BAR
+   ========================================= */
+header {
+    background: linear-gradient(135deg, var(--forest-green), var(--leaf-green));
+    color: var(--white);
+    padding: 1rem 5%;
+    box-shadow: 0 3px 10px rgba(36, 51, 38, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: var(--white);
+    color: var(--forest-green);
+}
+
+/* =========================================
+   MAIN LAYOUT & STATION BUTTONS
+   ========================================= */
+main {
+    max-width: 1100px;
+    width: 90%;
+    margin: 2.5rem auto;
+    flex: 1;
+}
+
+.page-title {
+    color: var(--forest-green);
+    font-size: 2.1rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 3px solid var(--sage-green);
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.page-subtitle {
+    color: var(--earth-muted);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+}
+
+/* Quick Station Navigation Bar */
+.station-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px dashed var(--sage-green);
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--forest-green);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid var(--forest-green);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--leaf-green);
+    border-color: var(--leaf-green);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--forest-green);
+    border: 2px solid var(--forest-green);
+}
+
+.btn-outline:hover {
+    background-color: var(--soft-leaf);
+    color: var(--forest-green);
+}
+
+/* =========================================
+   HOME PAGE (HERO SECTION)
+   ========================================= */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: var(--radius-organic);
+    box-shadow: var(--shadow-soft);
+    border-left: 6px solid var(--leaf-green);
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: var(--soft-leaf);
+    color: var(--forest-green);
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+}
+
+.hero-text h1 {
+    font-size: 2.4rem;
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.08rem;
+    color: var(--earth-muted);
+    margin-bottom: 1.8rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.hero-image {
+    flex: 0 0 280px;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 265px;
+    height: 265px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--sage-green);
+    box-shadow: var(--shadow-soft);
+}
+
+/* =========================================
+   CARDS, GRIDS & TAGS
+   ========================================= */
+.card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-organic);
+    box-shadow: var(--shadow-soft);
+    border-top: 4px solid var(--leaf-green);
+    margin-bottom: 2rem;
+}
+
+.card h2 {
+    color: var(--forest-green);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--white);
+    padding: 1.8rem;
+    border-radius: var(--radius-organic);
+    box-shadow: var(--shadow-soft);
+    border-left: 5px solid var(--sage-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    color: var(--forest-green);
+    font-size: 1.25rem;
+    margin-bottom: 0.7rem;
+}
+
+/* Academic Info List */
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--soft-leaf);
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: var(--forest-green);
+    display: inline-block;
+    width: 115px;
+}
+
+/* Nature Pill Tags */
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.8rem;
+}
+
+.tag {
+    background-color: var(--soft-leaf);
+    color: var(--forest-green);
+    border: 1px solid var(--sage-green);
+    padding: 0.35rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+/* Certificate Cards */
+.cert-card {
+    background-color: var(--white);
+    border-radius: var(--radius-organic);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    border-bottom: 4px solid var(--leaf-green);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color: var(--soft-leaf);
+    border-bottom: 2px solid var(--sage-green);
+}
+
+.cert-details {
+    padding: 1.5rem;
+}
+
+.cert-details h3 {
+    color: var(--forest-green);
+    margin-bottom: 0.4rem;
+}
+
+.cert-meta {
+    font-size: 0.9rem;
+    color: var(--earth-muted);
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTACT PAGE & FORM
+   ========================================= */
+.contact-item {
+    background-color: var(--soft-leaf);
+    border-left: 4px solid var(--forest-green);
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    color: var(--forest-green);
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--forest-green);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1.5px solid var(--sage-green);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fcfefd;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--forest-green);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    background-color: var(--forest-green);
+    color: var(--white);
+    text-align: center;
+    padding: 1.3rem;
+    margin-top: auto;
+    font-size: 0.92rem;
+}
+You sent
